@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type='text/javascript'>
+var isCtrl = false;
+document.onkeyup=function(e)
+{
+if(e.which == 17)
+isCtrl=false;
+}
+document.onkeydown=function(e)
+{
+if(e.which == 123)
+isCtrl=true;
+if (((e.which == 85) || (e.which == 65) || (e.which == 88) || (e.which == 67) || (e.which == 86) || (e.which == 2) || (e.which == 3) || (e.which == 123) || (e.which == 83)) && isCtrl == true)
+{
+return false;
+}
+}
+// right click code
+var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+function mischandler(){
+return false;
+}
+function mousehandler(e){
+var myevent = (isNS) ? e : event;
+var eventbutton = (isNS) ? myevent.which : myevent.button;
+if((eventbutton==2)||(eventbutton==3)) return false;
+}
+document.oncontextmenu = mischandler;
+document.onmousedown = mousehandler;
+document.onmouseup = mousehandler;
+//select content code disable  alok goyal
+function killCopy(e){
+return false
+}
+function reEnable(){
+return true
+}
+document.onselectstart=new Function ("return false")
+if (window.sidebar){
+document.onmousedown=killCopy
+document.onclick=reEnable
+}
+    </script>
+        <title>
+            PI Cubing - 2x2x2
+        </title>
+        <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 1224px)" href="laptop.css" />
+        <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px)" href="ipad.css" />
+        <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 320px) and (max-device-width: 480px)" href="mobile.css" />
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div class="menudiv">
+            <p class="pmenu" style="margin-bottom:60%;">
+                Menu
+            </p>
+            <a href="index.html"><p class="pmenu">
+                Home
+            </p></a>
+            <a href="2x2x2.html"><p class="pmenu">
+                2x2x2
+            </p></a>
+            <a href="3x3x3.html"><p class="pmenu">
+                3x3x3
+            </p></a>
+            <a href="4x4x4.html"><p class="pmenu">
+                4x4x4
+            </p></a>
+            <a href="5x5x5.html"><p class="pmenu">
+                5x5x5
+            </p></a>
+            <a href="pyraminx.html"><p class="pyramenu"   style="border:5px solid white">
+                Pyraminx
+            </p></a>
+        </div>
+        <a href="https://www.youtube.com/channel/UC8eEt_jIMbLYOE7wnOEXl4g"><img src="images/pyraminx.png"><a/>
+        <h1 align="center">
+            Pyraminx
+        </h1>
+        <p class="pcontent" style="margin-bottom:10px;">
+            It is said that the pyraminx is next in easiness after the 2x2x2. It also required very few algorithms. 
+            Only the algorithms are listed here, for complete tutorials on how to use them please visit 
+            our Youtube channel, <a href="https://www.youtube.com/channel/UC8eEt_jIMbLYOE7wnOEXl4g" style="text-decoration:underline;">PI Cubing</a>.
+        </p>
+        <p class="pcontent">
+            Note that the notation of a pyraminx is different from other cubic puzzles. Details are given in the video.
+            The only algorithms needed to memorise are the ones for the last layer of the pyraminx. The 
+            algorithm for the 'Eyes' case of the last layer of the pyraminx is: 
+        </p>
+        <p class="palg">
+            R'  L  R  L'  U  L'  U'  L 
+        </p>
+        <p class="pcontent">
+            The algorithm for the 'Symmetrical' case of the last layer of the pyraminx is: 
+        </p>
+        <p class="palg">
+            R'  U'  R  U'  R'  U'  R
+        </p>
+        <p class="pcontent">
+            The algorithm for the 'Right Eye' case of the last layer of the pyraminx is: 
+        </p>
+        <p class="palg">
+            R'  L  R  L'  U'  L'  U  L
+        </p>
+        <p class="pcontent">
+            The algorithm for the 'Left Eye' case of the last layer of the pyraminx is: 
+        </p>
+        <p class="palg">
+            L  R'  L'  R  U  R  U'  R'
+        </p>
+        <p class="pcontent">
+            With these major algorithms, and our amazing tutorial videos, we hope 
+            you have enjoyed solving the pyraminx!
+        </p>
+    </body>
+</html>

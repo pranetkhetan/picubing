@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type='text/javascript'>
+var isCtrl = false;
+document.onkeyup=function(e)
+{
+if(e.which == 17)
+isCtrl=false;
+}
+document.onkeydown=function(e)
+{
+if(e.which == 123)
+isCtrl=true;
+if (((e.which == 85) || (e.which == 65) || (e.which == 88) || (e.which == 67) || (e.which == 86) || (e.which == 2) || (e.which == 3) || (e.which == 123) || (e.which == 83)) && isCtrl == true)
+{
+return false;
+}
+}
+// right click code
+var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+function mischandler(){
+return false;
+}
+function mousehandler(e){
+var myevent = (isNS) ? e : event;
+var eventbutton = (isNS) ? myevent.which : myevent.button;
+if((eventbutton==2)||(eventbutton==3)) return false;
+}
+document.oncontextmenu = mischandler;
+document.onmousedown = mousehandler;
+document.onmouseup = mousehandler;
+//select content code disable  alok goyal
+function killCopy(e){
+return false
+}
+function reEnable(){
+return true
+}
+document.onselectstart=new Function ("return false")
+if (window.sidebar){
+document.onmousedown=killCopy
+document.onclick=reEnable
+}
+    </script>
+        <title>
+            PI Cubing - Home
+        </title>
+        <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 1224px)" href="laptop.css" />
+        <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px)" href="ipad.css" />
+        <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 320px) and (max-device-width: 480px)" href="mobile.css" />
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div class="menudiv">
+            <p class="pmenu" style="margin-bottom:60%;">
+                Menu
+            </p>
+            <a href="index.html"><p class="pmenu" style="border:5px solid white">
+                Home
+            </p></a>
+            <a href="2x2x2.html"><p class="pmenu">
+                2x2x2
+            </p></a>
+            <a href="3x3x3.html"><p class="pmenu">
+                3x3x3
+            </p></a>
+            <a href="4x4x4.html"><p class="pmenu">
+                4x4x4
+            </p></a>
+            <a href="5x5x5.html"><p class="pmenu">
+                5x5x5
+            </p></a>
+            <a href="pyraminx.html"><p class="pyramenu">
+                Pyraminx
+            </p></a>
+        </div>
+        <a href="https://www.youtube.com/channel/UC8eEt_jIMbLYOE7wnOEXl4g"><img src="images/logo.png"><a/>
+        <h1 align="center">
+            PI Cubing
+        </h1>
+        <p class="pcontent">
+            Hello and welcome to the world of PI Cubing! Here, you will find 
+            the most important algorithms required to solve different cubes.
+            The new world is the online world, and it is time that even 
+            cubing goes online, where its huge treasure trove of knowlegde can be 
+            accessed anywhere, anytime. The diiferent alogorithms for the different
+             cubes are on their respective pages under the specified heading. 
+             Interactive simulators for various cubes are also provided for practice 
+             anywhere, anytime. Enjoy exploring!
+        </p>
+        <p class="pcontent">
+            For complete tutorial and instructions, please head over 
+            to our Youtube Channel, <a href="https://www.youtube.com/channel/UC8eEt_jIMbLYOE7wnOEXl4g" style="text-decoration:underline;">PI Cubing<a/>.
+        </p>
+    </body>
+</html>

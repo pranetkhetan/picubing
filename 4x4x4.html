@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type='text/javascript'>
+var isCtrl = false;
+document.onkeyup=function(e)
+{
+if(e.which == 17)
+isCtrl=false;
+}
+document.onkeydown=function(e)
+{
+if(e.which == 123)
+isCtrl=true;
+if (((e.which == 85) || (e.which == 65) || (e.which == 88) || (e.which == 67) || (e.which == 86) || (e.which == 2) || (e.which == 3) || (e.which == 123) || (e.which == 83)) && isCtrl == true)
+{
+return false;
+}
+}
+// right click code
+var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+function mischandler(){
+return false;
+}
+function mousehandler(e){
+var myevent = (isNS) ? e : event;
+var eventbutton = (isNS) ? myevent.which : myevent.button;
+if((eventbutton==2)||(eventbutton==3)) return false;
+}
+document.oncontextmenu = mischandler;
+document.onmousedown = mousehandler;
+document.onmouseup = mousehandler;
+//select content code disable  alok goyal
+function killCopy(e){
+return false
+}
+function reEnable(){
+return true
+}
+document.onselectstart=new Function ("return false")
+if (window.sidebar){
+document.onmousedown=killCopy
+document.onclick=reEnable
+}
+    </script>
+    <script src="simulators/AnimCube4.js" type="text/javascript"></script>
+        <title>
+            PI Cubing - 4x4x4
+        </title>
+        <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 1224px)" href="laptop.css" />
+        <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px)" href="ipad.css" />
+        <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 320px) and (max-device-width: 480px)" href="mobile.css" />
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div class="menudiv">
+            <p class="pmenu" style="margin-bottom:60%;">
+                Menu
+            </p>
+            <a href="index.html"><p class="pmenu">
+                Home
+            </p></a>
+            <a href="2x2x2.html"><p class="pmenu">
+                2x2x2
+            </p></a>
+            <a href="3x3x3.html"><p class="pmenu">
+                3x3x3
+            </p></a>
+            <a href="4x4x4.html"><p class="pmenu"    style="border:5px solid white">
+                4x4x4
+            </p></a>
+            <a href="5x5x5.html"><p class="pmenu">
+                5x5x5
+            </p></a>
+            <a href="pyraminx.html"><p class="pyramenu">
+                Pyraminx
+            </p></a>
+        </div>
+        <a href="https://www.youtube.com/channel/UC8eEt_jIMbLYOE7wnOEXl4g"><img src="images/4x4x4/4x4x4.png"><a/>
+        <h1 align="center">
+            4x4x4
+        </h1>
+        <div class="simdiv">
+            <script>AnimCube4("initrevmove=#&bgcolor=ffffff")</script>
+           </div>
+        <p class="pcontent" style="margin-bottom:10px;">
+            The process of solving the 4x4x4 is mostly intuitive, and there are only 
+            2 parity algorithms you need to remeber. Only the algorithms are listed here, 
+            for complete tutorials on how to use them please visit 
+            our Youtube channel, <a href="https://www.youtube.com/channel/UC8eEt_jIMbLYOE7wnOEXl4g" style="text-decoration:underline;">PI Cubing</a>.
+            If you don't have a 4x4x4 cube at home, you can use the above simulator to practice. Pressing the small 
+            reverse button on the bottom left corner return the simulated cube to its original state.
+            It is recommended to open this simulator on a laptop for large size and easy controls.
+        </p>
+        <p class="pcontent">
+            The algorithm for the 4x4x4 OLL/Flipped edge parity is below:
+        </p>
+        <img src="images/4x4x4/alg1.png">
+        <p class="palg">
+            r2  B2  U2  l  U2  r'  U2  r  U2  F2  r  F2  l'  B2  r2
+        </p>
+        <p class="pcontent">
+            The algorithm for the PLL/Corner parity is below: 
+        </p>
+        <img src="images/4x4x4/alg2.png">
+        <p class="palg">
+            (Uu)2  (Ll)2  U2  l2  U2  (Ll)2  (Uu)2  F'  U'  F  U  F  R'  F2  U  F  U  F'  U'  F  R 
+        </p>
+        <p class="pcontent">
+            With these major algorithms, and our amazing tutorial videos, we hope 
+            you have enjoyed solving the 4x4x4 cube!
+        </p>
+    </body>
+</html>

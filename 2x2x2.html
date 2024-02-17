@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type='text/javascript'>
+var isCtrl = false;
+document.onkeyup=function(e)
+{
+if(e.which == 17)
+isCtrl=false;
+}
+document.onkeydown=function(e)
+{
+if(e.which == 123)
+isCtrl=true;
+if (((e.which == 85) || (e.which == 65) || (e.which == 88) || (e.which == 67) || (e.which == 86) || (e.which == 2) || (e.which == 3) || (e.which == 123) || (e.which == 83)) && isCtrl == true)
+{
+return false;
+}
+}
+// right click code
+var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+function mischandler(){
+return false;
+}
+function mousehandler(e){
+var myevent = (isNS) ? e : event;
+var eventbutton = (isNS) ? myevent.which : myevent.button;
+if((eventbutton==2)||(eventbutton==3)) return false;
+}
+document.oncontextmenu = mischandler;
+document.onmousedown = mousehandler;
+document.onmouseup = mousehandler;
+//select content code disable  alok goyal
+function killCopy(e){
+return false
+}
+function reEnable(){
+return true
+}
+document.onselectstart=new Function ("return false")
+if (window.sidebar){
+document.onmousedown=killCopy
+document.onclick=reEnable
+}
+    </script>
+    <script src="simulators/AnimCube2.js" type="text/javascript"></script>
+        <title>
+            PI Cubing - 2x2x2
+        </title>
+        <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 1224px)" href="laptop.css" />
+        <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px)" href="ipad.css" />
+        <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 320px) and (max-device-width: 480px)" href="mobile.css" />
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div class="menudiv">
+            <p class="pmenu" style="margin-bottom:60%;">
+                Menu
+            </p>
+            <a href="index.html"><p class="pmenu">
+                Home
+            </p></a>
+            <a href="2x2x2.html"><p class="pmenu"  style="border:5px solid white">
+                2x2x2
+            </p></a>
+            <a href="3x3x3.html"><p class="pmenu">
+                3x3x3
+            </p></a>
+            <a href="4x4x4.html"><p class="pmenu">
+                4x4x4
+            </p></a>
+            <a href="5x5x5.html"><p class="pmenu">
+                5x5x5
+            </p></a>
+            <a href="pyraminx.html"><p class="pyramenu">
+                Pyraminx
+            </p></a>
+        </div>
+        <a href="https://www.youtube.com/channel/UC8eEt_jIMbLYOE7wnOEXl4g"><img src="images/2x2x2.png"><a/>
+        <h1 align="center">
+            2x2x2
+        </h1>
+        <div class="simdiv">
+            <script>AnimCube2("initrevmove=#&bgcolor=ffffff")</script>
+           </div>
+        <p class="pcontent" style="margin-bottom:10px;">
+            The 2x2x2 rubiks cube is the easiest one to solve, and thus requires only 3 major algorithms.
+            Only the algorithms are listed here, for complete tutorials on how to use them please visit 
+            our Youtube channel, <a href="https://www.youtube.com/channel/UC8eEt_jIMbLYOE7wnOEXl4g" style="text-decoration:underline;">PI Cubing</a>.
+             If you don't have a 2x2x2 cube at home, you can use the above simulator to practice. Pressing the small 
+             reverse button on the bottom left corner return the simulated cube to its original state.
+             It is recommended to open this simulator on a laptop for large size and easy controls.
+        </p>
+        <p class="pcontent">
+            This is the first algorithm required to solve the first layer after 
+            solving the white side and keeping the solved part at the back is :
+        </p>
+        <p class="palg">
+            R'  D  R  L  D'  L  R'  D  R  
+        </p>
+        <p class="pcontent">
+            For a complete tutorial and instructions, please click on the video 
+            link given at the beginning of this page. The next algorithm required 
+            to solve the yellow face without spoiling the first layer is: 
+        </p>
+        <p class="palg">
+            R  U  R'  U  R  U2  R'
+        </p>
+        <p class="pcontent">
+            More specifications are given in the video. The last algorithm to solve the cube 
+            is:
+        </p>
+        <p class="palg">
+            R'  F  R'  B2  R  F' R  B2  R2  B2
+        </p>
+        <p class="pcontent">
+            With these major algorithms, and our amazing tutorial videos, we hope 
+            you have enjoyed solving the 2x2x2 cube!
+        </p>
+    </body>
+</html>

@@ -1,0 +1,123 @@
+*
+{
+    margin:0px;
+    padding:0px;
+}
+div[class="menudiv"]
+{
+    position:fixed;
+    height:100%;
+    width:20%;
+    background-color:black;
+    padding:15px;
+}
+div[class="simdiv"]
+{
+    width:400px;
+    height:400px;
+    margin-left:48%;
+}
+p[class="pmenu"]
+{
+    color:white;
+    background-color:grey;
+    font-family:rockwell;
+    width:90%;
+    margin:auto;
+    padding:10px;
+    border-radius:15px;
+    text-align:center;
+    font-size:30px;
+    margin-bottom:10px;
+}
+p[class="pyramenu"]
+{
+    color:white;
+    background-color:grey;
+    font-family:rockwell;
+    width:90%;
+    margin:auto;
+    padding:10px;
+    border-radius:15px;
+    text-align:center;
+    font-size:30px;
+    margin-bottom:10px;
+}
+a
+{
+    text-decoration:none;
+}
+h1
+{
+    position:relative;
+    height:20%;
+    width:77%;
+    left:22.5%;
+    border-bottom:5px solid black;
+    line-height:200%;
+    font-family:rockwell;
+    font-weight:bold;
+    color:black;
+    font-size:400%;
+}
+img
+{
+    width:10%;
+    height:20%;
+    left:750px;
+    position:relative;
+    margin-top:10px;
+}
+p[class="pcontent"]
+{
+    background-color:white;
+    color:black;
+    margin-left:22.25%;
+    text-align:justify;
+    width:75.5%;
+    font-size:25px;
+    font-family:rockwell;
+    padding:10px;
+    margin-bottom:10px;
+}
+p[class="palg"]
+{
+    background-color:grey;
+    color:white;
+    margin-left:22.25%;
+    text-align:justify;
+    width:75.5%;
+    font-size:40px;
+    font-weight:bold;
+    font-family:rockwell;
+    padding:10px;
+    text-align:center;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+p[class="algdown"]
+{
+    background-color:grey;
+    color:white;
+    margin-left:22.25%;
+    text-align:justify;
+    width:75.5%;
+    font-size:40px;
+    font-weight:bold;
+    font-family:rockwell;
+    padding:10px;
+    text-align:center;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+p[class="algdown"] a
+{
+    text-decoration:none;
+    color:white;
+}
+p[class="algdown"]:hover
+{
+    background-color:white;
+    border:3px solid grey;
+    color:black;
+}
